@@ -1,10 +1,12 @@
 import os
 from pysec import xbrl
-
+import django
 from django.db import models
 from django.conf import settings
-
-DATA_DIR = settings.DATA_DIR
+settings.configure()
+django.setup()
+#DATA_DIR = settings.DATA_DIR
+DATA_DIR = '~/apps/repo/pysec/pysec/data/'
 
 class Index(models.Model):
     

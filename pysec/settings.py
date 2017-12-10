@@ -1,6 +1,9 @@
 # Django settings for pysec project.
 import os
 
+import django
+django.setup()
+
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 DEBUG = True
@@ -45,7 +48,8 @@ WSGI_APPLICATION = 'wsgi.application'
 ############### PYSEC specific variables
 
 # assumes this directory exists
-DATA_DIR = "%s/pysec/data/" % PROJECT_ROOT
+#DATA_DIR = "%s/pysec/data/" % PROJECT_ROOT
+DATA_DIR = "%s/data/" % PROJECT_ROOT
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
@@ -146,6 +150,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'pysec',
+    'pysec.models',
 )
 
 # A sample logging configuration. The only tangible logging

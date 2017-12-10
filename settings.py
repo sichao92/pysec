@@ -1,6 +1,7 @@
 # Django settings for pysec project.
 import os
-
+import django
+django.setup()
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 DEBUG = True
@@ -146,6 +147,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'pysec',
+    'pysec.models',
 )
 
 # A sample logging configuration. The only tangible logging
