@@ -1,0 +1,1 @@
+/Users/sichao/apps/repo/pysec/pysec/xbrl_fundamentals.py
